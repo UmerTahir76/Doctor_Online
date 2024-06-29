@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "304928687901",
+    "project_id": "doctor-online-13e9e",
+    "storage_bucket": "doctor-online-13e9e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:304928687901:android:0fe777637cb5bdbcaf83f4",
+        "android_client_info": {
+          "package_name": "com.example.doctormodule"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqgslqLMmKkCakm1lNfjSUbgv790IkOs8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:304928687901:android:7d9524db4416e654af83f4",
+        "android_client_info": {
+          "package_name": "com.example.doctoronline"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqgslqLMmKkCakm1lNfjSUbgv790IkOs8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

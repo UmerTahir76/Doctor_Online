@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".auth.LandingPage">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_three"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_six"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6"
+        />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_one"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_nine"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9"
+        />
+
+
+
+    <ImageView
+        android:id="@+id/heart_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_three"
+        android:src="@drawable/heart_logo_purple"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+        app:layout_constraintLeft_toLeftOf="@id/heart_logo"
+        app:layout_constraintRight_toRightOf="@id/heart_logo"
+        app:layout_constraintTop_toBottomOf="@id/heart_logo"
+        android:text="DOCTAL"
+        android:textColor="@color/blue"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        />
+
+    <View
+        android:id="@+id/login_btn"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        app:layout_constraintLeft_toLeftOf="@id/vertical_one"
+        app:layout_constraintRight_toRightOf="@id/vertical_nine"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_six"
+        android:background="@drawable/purple_button"
+        android:layout_marginTop="16dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/login_btn"
+        app:layout_constraintRight_toRightOf="@id/login_btn"
+        app:layout_constraintTop_toTopOf="@id/login_btn"
+        app:layout_constraintBottom_toBottomOf="@id/login_btn"
+        android:text="Login"
+        android:textStyle="bold"
+
+        android:textColor="@color/white"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        />
+
+    <View
+        android:id="@+id/register_btn"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        app:layout_constraintLeft_toLeftOf="@id/vertical_one"
+        app:layout_constraintRight_toRightOf="@id/vertical_nine"
+        app:layout_constraintTop_toBottomOf="@id/login_btn"
+        android:background="@drawable/white_button"
+        android:layout_marginTop="24dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/register_btn"
+        app:layout_constraintRight_toRightOf="@id/register_btn"
+        app:layout_constraintTop_toTopOf="@id/register_btn"
+        app:layout_constraintBottom_toBottomOf="@id/register_btn"
+        android:text="Register"
+        android:textStyle="bold"
+        android:textColor="@color/blue"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

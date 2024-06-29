@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginVertical="8dp"
+    android:layout_marginHorizontal="8dp"
+    android:background="@drawable/lab_card">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_seven"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.73" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_five"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/male_doctor"
+        app:civ_border_width="4dp"
+        app:civ_border_color="@color/white"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toTopOf="@id/profile_image"
+        app:layout_constraintLeft_toRightOf="@id/profile_image"
+        android:layout_marginLeft="10dp"
+        android:text="Dr. Mubeen Niazi"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        />
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/name"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        android:textColor="@color/blue"
+        android:layout_marginTop="8dp"
+        android:text="Dentist"
+        android:textStyle="bold"
+        android:layout_marginLeft="2dp"
+        />
+        <View
+            android:id="@+id/experience_bg"
+            android:layout_width="140dp"
+            android:layout_height="30dp"
+            android:background="@drawable/timebar"
+            android:layout_marginTop="6dp"
+            app:layout_constraintTop_toBottomOf="@id/category"
+            app:layout_constraintLeft_toLeftOf="@id/name"
+            />
+
+    <TextView
+        android:id="@+id/experience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/experience_bg"
+        app:layout_constraintRight_toRightOf="@id/experience_bg"
+        app:layout_constraintTop_toTopOf="@id/experience_bg"
+        app:layout_constraintBottom_toBottomOf="@id/experience_bg"
+        android:textColor="@color/white"
+        android:text="7 years experience"
+    />
+
+    <View
+        android:id="@+id/patients_bg"
+        android:layout_width="110dp"
+        android:layout_height="30dp"
+        android:background="@drawable/timebar"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@id/category"
+        app:layout_constraintLeft_toRightOf="@id/experience_bg"
+        android:layout_marginLeft="2dp"
+        />
+
+    <TextView
+        android:id="@+id/patients"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/patients_bg"
+        app:layout_constraintRight_toRightOf="@id/patients_bg"
+        app:layout_constraintTop_toTopOf="@id/patients_bg"
+        app:layout_constraintBottom_toBottomOf="@id/patients_bg"
+        android:textColor="@color/white"
+        android:text="102+ patients"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="#F4F5F5"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@id/profile_image"
+        android:layout_marginHorizontal="16dp"
+        />
+
+    <TextView
+        android:id="@+id/hospital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/profile_image"
+        app:layout_constraintTop_toBottomOf="@id/profile_image"
+        android:textColor="@color/blue"
+        android:layout_marginTop="16dp"
+        android:text="Khizar Hospital"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginLeft="16dp"
+        />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/hospital"
+            app:layout_constraintTop_toBottomOf="@id/hospital"
+            android:text="10:00 A.M - 8:00 P.M"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hospital"
+        android:text="Rs. 1200"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="32dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"/>
+
+    <View
+        android:id="@+id/view_profile_btn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/vertical_five"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_seven"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/white_button"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/view_profile_btn"
+        app:layout_constraintRight_toRightOf="@id/view_profile_btn"
+        app:layout_constraintTop_toTopOf="@id/view_profile_btn"
+        app:layout_constraintBottom_toBottomOf="@id/view_profile_btn"
+        android:text="View Profile"
+        android:textColor="@color/blue"
+        android:textSize="16sp"/>
+
+    <View
+        android:id="@+id/book_appointment_btn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toRightOf="@id/vertical_five"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_seven"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/purple_button"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/book_appointment_btn"
+        app:layout_constraintRight_toRightOf="@id/book_appointment_btn"
+        app:layout_constraintTop_toTopOf="@id/book_appointment_btn"
+        app:layout_constraintBottom_toBottomOf="@id/book_appointment_btn"
+        android:text="Book Appointment"
+        android:textColor="@color/white"
+        android:textSize="16sp"/>
+
+
+
+
+    <!--    <TextView-->
+<!--        android:id="@+id/days"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/category_bg"-->
+<!--        android:text="Mon - Fri"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:layout_marginLeft="16dp"-->
+<!--        android:textSize="16sp"-->
+<!--        />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/para1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintLeft_toRightOf="@id/days"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/category_bg"-->
+<!--        android:text=" | "-->
+<!--        android:textStyle="bold"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:layout_marginLeft="8dp"-->
+<!--        android:textSize="16sp"-->
+
+<!--        />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/time"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintLeft_toRightOf="@id/para1"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/category_bg"-->
+<!--        android:text="10:00 A.M - 8:00 P.M"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:layout_marginLeft="8dp"-->
+<!--        android:textSize="16sp"-->
+
+<!--        />-->
+<!--    -->
+
+    <!--    <View-->
+    <!--        android:id="@+id/category_bg"-->
+    <!--        android:layout_width="150dp"-->
+    <!--        android:layout_height="30dp"-->
+    <!--        android:background="@drawable/timebar"-->
+    <!--        android:alpha="0.6"-->
+    <!--        android:layout_marginTop="6dp"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/name"-->
+    <!--        app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--        android:layout_marginLeft="16dp"-->
+    <!--        />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

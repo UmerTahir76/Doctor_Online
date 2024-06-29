@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/lab_card"
+    android:layout_marginVertical="8dp"
+    android:layout_marginHorizontal="8dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/header_guid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.46" />
+
+    <ImageView
+        android:id="@+id/img_lab"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="40dp"/>
+    <TextView
+        android:id="@+id/title_lab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chugtai Lab"
+        android:textSize="17dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/header_guid"
+        android:layout_marginTop="40dp"/>
+    <View
+        android:id="@+id/time_bg"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:background="@drawable/timebar"
+        android:alpha="0.6"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/title_lab"
+        app:layout_constraintLeft_toRightOf="@id/header_guid"/>
+    <ImageView
+        android:id="@+id/clock_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/clock"
+        app:layout_constraintLeft_toLeftOf="@id/time_bg"
+        app:layout_constraintTop_toTopOf="@id/time_bg"
+        app:layout_constraintBottom_toBottomOf="@id/time_bg"
+        android:layout_marginLeft="8dp"/>
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5:00 AM - 5:00 PM"
+        app:layout_constraintTop_toTopOf="@id/time_bg"
+        app:layout_constraintBottom_toBottomOf="@id/time_bg"
+        app:layout_constraintLeft_toRightOf="@id/clock_icon"
+        android:textSize="12dp"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:id="@+id/lab_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/time_bg"
+        app:layout_constraintLeft_toRightOf="@id/header_guid"
+        android:layout_marginTop="16dp"
+        android:textColor="#9E9E9E"
+        android:textSize="15dp"/>
+    <Button
+        android:id="@+id/select_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Test"
+        android:background="@drawable/purple_button"
+        android:textColor="@color/white"
+        android:layout_marginHorizontal="30dp"
+        app:layout_constraintTop_toBottomOf="@id/lab_address"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="16dp"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

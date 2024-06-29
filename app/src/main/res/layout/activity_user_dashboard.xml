@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserDashboard">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_one"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_four"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.38" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_seven"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_one"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_five"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_nine"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/hospital_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toRightOf="@id/vertical_one"
+        app:layout_constraintRight_toRightOf="@id/vertical_nine"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_seven"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginVertical="8dp"
+        />
+
+    <TextView
+        android:id="@+id/para1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/vertical_one"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_one"
+        android:text="Hello,"
+        android:textColor="@color/blue"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/para2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/para1"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_one"
+        android:text="Name"
+        android:textSize="20sp"
+        android:layout_marginLeft="8dp"
+        />
+    <TextView
+        android:id="@+id/para3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/vertical_one"
+        app:layout_constraintTop_toBottomOf="@id/para1"
+        android:text="Good Morning"
+        android:textSize="20sp"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        app:layout_constraintTop_toBottomOf="@id/para3"
+        android:background="@color/grey"
+        android:layout_marginTop="16dp"/>
+
+    <View
+        android:id="@+id/dashed_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="@id/vertical_one"
+        app:layout_constraintRight_toRightOf="@id/vertical_nine"
+        app:layout_constraintTop_toBottomOf="@id/view"
+        app:layout_constraintBottom_toTopOf="@id/para4"
+        android:background="@drawable/dashed_shape"
+        android:layout_marginVertical="40dp"
+        android:layout_marginHorizontal="16dp"
+        />
+    <ImageView
+        android:id="@+id/heart_logo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintLeft_toLeftOf="@id/dashed_view"
+        app:layout_constraintTop_toTopOf="@id/dashed_view"
+        app:layout_constraintBottom_toBottomOf="@id/dashed_view"
+        android:src="@drawable/heart_logo_purple"
+        android:layout_marginLeft="8dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/heart_logo"
+        app:layout_constraintTop_toTopOf="@id/dashed_view"
+        app:layout_constraintBottom_toBottomOf="@id/dashed_view"
+        android:text="My Appointments "
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginLeft="8dp"
+        />
+
+    <TextView
+        android:id="@+id/para4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/vertical_one"
+        app:layout_constraintBottom_toTopOf="@id/horizontal_four"
+        android:text="How Can We Assist You Today?"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:textStyle="bold"
+        />
+    <View
+        android:id="@+id/find_doctors_btn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="@id/vertical_one"
+        app:layout_constraintRight_toRightOf="@id/vertical_five"
+        app:layout_constraintTop_toTopOf="@id/horizontal_four"
+        app:layout_constraintBottom_toBottomOf="@id/horizontal_seven"
+        android:background="#EBEBFA"
+        android:layout_marginVertical="32dp"
+        android:layout_marginRight="8dp"
+        />
+    <TextView
+        android:id="@+id/para5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Find Doctors"
+        app:layout_constraintLeft_toLeftOf="@id/find_doctors_btn"
+        app:layout_constraintRight_toRightOf="@id/find_doctors_btn"
+        app:layout_constraintTop_toTopOf="@id/find_doctors_btn"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verified By PMC"
+        app:layout_constraintLeft_toLeftOf="@id/find_doctors_btn"
+        app:layout_constraintRight_toRightOf="@id/find_doctors_btn"
+        app:layout_constraintTop_toBottomOf="@id/para5"
+        android:layout_marginTop="4dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/blue"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/find_doctors_btn"
+        app:layout_constraintRight_toRightOf="@id/find_doctors_btn"
+        app:layout_constraintBottom_toBottomOf="@id/find_doctors_btn"
+        android:src="@drawable/find_doctor_img"
+        />
+
+    <View
+        android:id="@+id/find_labs_btn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="@id/vertical_five"
+        app:layout_constraintRight_toRightOf="@id/vertical_nine"
+        app:layout_constraintTop_toTopOf="@id/horizontal_four"
+        app:layout_constraintBottom_toBottomOf="@id/horizontal_seven"
+        android:background="#ECFAEB"
+        android:layout_marginVertical="32dp"
+        android:layout_marginLeft="8dp"
+        />
+
+    <TextView
+        android:id="@+id/para6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lab Tests"
+        app:layout_constraintLeft_toLeftOf="@id/find_labs_btn"
+        app:layout_constraintRight_toRightOf="@id/find_labs_btn"
+        app:layout_constraintTop_toTopOf="@id/find_labs_btn"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Safe And Hygienic"
+        app:layout_constraintLeft_toLeftOf="@id/find_labs_btn"
+        app:layout_constraintRight_toRightOf="@id/find_labs_btn"
+        app:layout_constraintTop_toBottomOf="@id/para6"
+        android:layout_marginTop="4dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/green"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/find_labs_btn"
+        app:layout_constraintRight_toRightOf="@id/find_labs_btn"
+        app:layout_constraintBottom_toBottomOf="@id/find_labs_btn"
+        android:src="@drawable/lab_img"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
